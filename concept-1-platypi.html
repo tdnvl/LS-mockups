@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Concept 1 — Literary Sanctuary (Platypi)</title>
+<link href="https://fonts.googleapis.com/css2?family=Platypi:wght@400;600&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ivory:#F7F3E9;
+    --forest:#2C3D2E;
+    --forest-dark:#1B2620;
+    --forest-light:#E8ECEA;
+    --terra:#A85A35;
+    --terra-dark:#7D3F1E;
+    --terra-light:#F5E8DD;
+    --plum:#6B4A5E;
+    --plum-dark:#4A3042;
+    --plum-light:#F1E8EE;
+    --gold:#9A7E35;
+    --gold-dark:#6D5828;
+    --gold-light:#F8F3E1;
+    --text:#1F1D18;
+    --text-secondary:#5D5450;
+    --text-muted:#8B8680;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'DM Sans',sans-serif;color:var(--text);background:#fff;line-height:1.6;}
+  h1,h2,h3{font-family:'Platypi',serif;font-weight:600;color:var(--text);}
+  .label{position:fixed;top:0;left:0;background:var(--forest);color:var(--ivory);font-family:'DM Sans';font-size:12px;padding:6px 14px;letter-spacing:.05em;z-index:99;}
+  a{color:inherit;text-decoration:none;}
+
+  nav{display:flex;align-items:center;justify-content:space-between;padding:28px 64px;border-bottom:1px solid #e8e2d0;}
+  .logo{font-family:'Platypi',serif;font-size:22px;font-weight:600;letter-spacing:.03em;color:var(--text);}
+  .navlinks{display:flex;gap:38px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-secondary);}
+  .navlinks a:hover{color:var(--terra);}
+  .login{font-size:13px;color:var(--text);border:1px solid var(--text);padding:8px 20px;border-radius:2px;}
+
+  .hero{display:grid;grid-template-columns:1fr 1fr;background:var(--ivory);align-items:center;gap:0;}
+  .hero-photo{height:520px;background:linear-gradient(135deg,#D9CBAE,#B8A583);display:flex;align-items:center;justify-content:center;color:#fff;font-size:14px;letter-spacing:.05em;}
+  .hero-copy{padding:60px 80px;}
+  .kicker{font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:var(--terra);margin-bottom:18px;font-weight:500;}
+  .hero-copy h1{font-size:52px;line-height:1.1;margin-bottom:22px;}
+  .hero-copy p{font-size:17px;color:var(--text-secondary);max-width:460px;margin-bottom:32px;}
+  .btn-primary{display:inline-block;background:var(--forest);color:#fff;padding:16px 34px;font-size:14px;letter-spacing:.05em;text-transform:uppercase;border-radius:2px;border:none;cursor:pointer;}
+  .btn-primary:hover{background:var(--forest-dark);}
+
+  .tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding:64px;}
+  .tile{height:220px;border-radius:4px;display:flex;align-items:flex-end;padding:22px;color:#fff;font-family:'Platypi',serif;font-size:22px;font-weight:600;}
+  .t1{background:var(--forest-light);color:var(--text);}
+  .t2{background:var(--plum-light);color:var(--text);}
+  .t3{background:var(--terra-light);color:var(--text);}
+  .t4{background:var(--gold-light);color:var(--text);}
+
+  .book{display:grid;grid-template-columns:280px 1fr;gap:56px;padding:20px 64px 80px;align-items:start;}
+  .book-cover{height:400px;border-radius:4px;background:var(--terra);display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Platypi',serif;font-size:20px;text-align:center;padding:20px;font-weight:600;}
+  .book-text{background:var(--gold-light);padding:44px;border-radius:4px;}
+  .book-text p{font-size:16px;color:var(--text-secondary);margin-bottom:18px;font-style:italic;}
+  .book-text .attr{font-size:13px;font-style:normal;text-transform:uppercase;letter-spacing:.05em;color:var(--text);}
+
+  .about{background:var(--forest);color:var(--ivory);display:grid;grid-template-columns:1fr 1fr;align-items:center;}
+  .about-photo{height:440px;background:linear-gradient(160deg,#4A5F4C,#2C3D2E);}
+  .about-copy{padding:60px 70px;}
+  .about-copy h3{color:var(--gold);font-family:'Platypi',serif;font-weight:600;}
+  .about-copy p{font-size:17px;color:#D8D2BF;margin-bottom:16px;}
+
+  .quote{text-align:center;padding:90px 120px;}
+  .quote h2{font-size:32px;line-height:1.3;color:var(--terra);margin-bottom:24px;font-family:'Platypi',serif;font-weight:600;}
+  .quote p{font-size:16px;color:var(--text-secondary);max-width:560px;margin:0 auto 20px;}
+
+  .newsletter{background:var(--forest);color:var(--ivory);padding:64px;text-align:center;}
+  .newsletter h3{color:var(--gold);font-size:16px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px;font-family:'DM Sans';font-weight:500;}
+  .newsletter p{color:#D8D2BF;max-width:480px;margin:0 auto 28px;}
+  .form-row{display:flex;gap:10px;max-width:520px;margin:0 auto;}
+  .form-row input{flex:1;padding:14px 16px;border:1px solid #4A5F4C;background:transparent;color:#fff;border-radius:2px;}
+  .form-row button{background:var(--terra);color:#fff;border:none;padding:14px 28px;border-radius:2px;font-size:14px;cursor:pointer;}
+  .form-row button:hover{background:var(--terra-dark);}
+</style>
+</head>
+<body>
+<div class="label">CONCEPT 1 — LITERARY SANCTUARY (PLATYPI)</div>
+
+<nav>
+  <div class="logo">Lauren Sapala</div>
+  <div class="navlinks"><a>Books</a><a>Coaching</a><a>Blog</a><a>About</a><a>Contact</a></div>
+  <div class="login">Client Portal</div>
+</nav>
+
+<section class="hero">
+  <div class="hero-photo"><img src="https://laurensapala.com/wp-content/uploads/2024/07/heads-768x753.jpg" alt="Lauren Sapala" style="height:100%;width:100%;object-fit:cover;border-radius:4px;"></div>
+  <div class="hero-copy">
+    <div class="kicker">For the deeply feeling, deeply seeing writer</div>
+    <h1>Your sensitivity is not a flaw. It's your gift.</h1>
+    <p>Lauren helps INFJ and INFP writers trust their intuition, finish the book they were meant to write, and stop apologizing for feeling everything.</p>
+    <button class="btn-primary">Join the Newsletter</button>
+  </div>
+</section>
+
+<section class="tiles">
+  <div class="tile t1">Books</div>
+  <div class="tile t2">Coaching</div>
+  <div class="tile t3">Workshops</div>
+  <div class="tile t4">The Circle</div>
+</section>
+
+<section class="book">
+  <div class="book-cover"><img src="https://laurensapala.com/wp-content/uploads/2026/01/CFBS-Cover2-768x1229.jpg" alt="Conquering the Fear of Being Seen - Free Guide" style="height:100%;width:100%;object-fit:cover;border-radius:4px;"></div>
+  <div class="book-text">
+    <p>"Lauren writes with the rare gift of making you feel accompanied — like she's already walked the path you're afraid to take, and she's leaving a lantern for you."</p>
+    <div class="attr">— Reader review, Goodreads</div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="about-photo"></div>
+  <div class="about-copy">
+    <h3 style="font-size:26px;margin-bottom:18px;">About Lauren</h3>
+    <p>I've spent over a decade helping introverted, intuitive writers understand their own minds — and finally give themselves permission to write.</p>
+    <p>My work blends psychological insight with practical craft, because sensitive creatives don't need more hustle. They need to be understood.</p>
+  </div>
+</section>
+
+<section class="quote">
+  <h2>"This isn't a writing group. It's a homecoming."</h2>
+  <p>The Circle is where introspective writers stop feeling like outsiders and start feeling like they finally found their people.</p>
+</section>
+
+<div class="newsletter">
+  <h3>Join Lauren's Newsletter</h3>
+  <p>Get instant access to "Conquering the Fear of Being Seen," a free guide for sensitive writers ready to stop hiding.</p>
+  <div class="form-row">
+    <input placeholder="First name">
+    <input placeholder="Email">
+    <button>Submit</button>
+  </div>
+</div>
+
+</body>
+</html>

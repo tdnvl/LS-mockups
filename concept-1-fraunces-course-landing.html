@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Love & Sexuality for INFJs and INFPs — Lauren Sapala</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ivory:#F7F3E9;
+    --forest:#2C3D2E;
+    --forest-dark:#1B2620;
+    --forest-light:#E8ECEA;
+    --terra:#A85A35;
+    --terra-dark:#7D3F1E;
+    --terra-light:#F5E8DD;
+    --plum:#6B4A5E;
+    --plum-dark:#4A3042;
+    --plum-light:#F1E8EE;
+    --gold:#9A7E35;
+    --gold-dark:#6D5828;
+    --gold-light:#F8F3E1;
+    --text:#1F1D18;
+    --text-secondary:#5D5450;
+    --text-muted:#8B8680;
+    --green:#6B8A7A;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'DM Sans',sans-serif;color:var(--text);background:#fff;line-height:1.7;}
+  h1,h2,h3,h4{font-family:'Fraunces',serif;font-weight:600;color:var(--text);}
+  a{color:inherit;text-decoration:none;}
+
+  /* Navigation */
+  nav{display:flex;align-items:center;justify-content:space-between;padding:28px 64px;border-bottom:1px solid #e8e2d0;}
+  .logo{font-family:'Fraunces',serif;font-size:22px;font-weight:600;letter-spacing:.03em;color:var(--text);}
+  .navlinks{display:flex;gap:38px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-secondary);}
+  .navlinks a:hover{color:var(--terra);}
+
+  /* Hero Section */
+  .hero{background:var(--ivory);padding:80px 64px;text-align:center;max-width:800px;margin:0 auto;}
+  .hero-kicker{font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:var(--terra);margin-bottom:18px;font-weight:500;}
+  .hero h1{font-size:56px;line-height:1.15;margin-bottom:28px;}
+  .hero-subtitle{font-size:20px;color:var(--text-secondary);margin-bottom:0;}
+  .hero p{font-size:17px;color:var(--text-secondary);line-height:1.8;margin-top:28px;max-width:700px;margin-left:auto;margin-right:auto;}
+
+  /* CTA Button */
+  .btn-primary{display:inline-block;background:var(--forest);color:#fff;padding:16px 40px;font-size:14px;letter-spacing:.05em;text-transform:uppercase;border-radius:2px;border:none;cursor:pointer;}
+  .btn-primary:hover{background:var(--forest-dark);}
+  .btn-primary-alt{display:inline-block;background:var(--terra);color:#fff;padding:16px 40px;font-size:14px;letter-spacing:.05em;text-transform:uppercase;border-radius:2px;border:none;cursor:pointer;}
+  .btn-primary-alt:hover{background:var(--terra-dark);}
+  .btn-primary-green{display:inline-block;background:var(--green);color:#fff;padding:16px 40px;font-size:14px;letter-spacing:.05em;text-transform:uppercase;border-radius:2px;border:none;cursor:pointer;}
+  .btn-primary-green:hover{background:#5A7A6B;}
+
+  /* First CTA after hero */
+  .hero-cta{text-align:center;padding:40px 0;max-width:800px;margin:0 auto;}
+
+  /* Problem Section */
+  .section{padding:80px 64px;max-width:900px;margin:0 auto;}
+  .section h2{font-size:40px;line-height:1.25;margin-bottom:28px;}
+  .section p{font-size:16px;color:var(--text-secondary);margin-bottom:20px;line-height:1.85;}
+  .section p strong{color:var(--text);}
+
+  /* Video Modules Grid */
+  .modules{background:var(--forest-light);padding:80px 64px;}
+  .modules-container{max-width:1100px;margin:0 auto;}
+  .modules h2{font-size:40px;line-height:1.25;margin-bottom:60px;text-align:center;}
+  .modules-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:60px;}
+  .module-card{background:#fff;padding:0;border-radius:4px;overflow:hidden;display:flex;flex-direction:column;}
+  .module-img{height:180px;background:linear-gradient(160deg,#D9CBAE,#B8A583);display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px;text-align:center;padding:16px;}
+  .module-text{padding:22px;flex:1;display:flex;flex-direction:column;justify-content:flex-end;}
+  .module-num{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--terra);margin-bottom:8px;}
+  .module-title{font-size:16px;font-family:'Fraunces',serif;color:var(--text);}
+  .modules-cta{text-align:center;}
+
+  /* Benefits Section */
+  .benefits{padding:80px 64px;background:var(--plum-light);}
+  .benefits-container{max-width:900px;margin:0 auto;}
+  .benefits h2{font-size:40px;line-height:1.25;margin-bottom:48px;}
+  .benefit-item{margin-bottom:32px;}
+  .benefit-title{font-size:18px;font-family:'Fraunces',serif;color:var(--text);margin-bottom:12px;}
+  .benefit-text{font-size:16px;color:var(--text-secondary);line-height:1.85;}
+
+  /* Testimonials Section */
+  .testimonials{background:#fff;padding:80px 64px;}
+  .testimonials-container{max-width:900px;margin:0 auto;}
+  .testimonials-header{text-align:center;margin-bottom:60px;}
+  .testimonials-header h2{font-size:40px;line-height:1.25;margin-bottom:12px;}
+  .testimonials-header p{font-size:16px;color:var(--text-secondary);}
+  .testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-bottom:60px;}
+  .testimonial-card{background:var(--gold-light);padding:32px;border-radius:4px;}
+  .testimonial-text{font-size:15px;color:var(--text-secondary);margin-bottom:16px;line-height:1.8;font-style:italic;}
+  .testimonial-attr{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--text);font-weight:500;}
+  .testimonials-cta{text-align:center;}
+
+  /* Trust Badges */
+  .trust-section{background:var(--forest-light);padding:60px 64px;}
+  .trust-container{max-width:900px;margin:0 auto;}
+  .trust-badges{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;text-align:center;margin-bottom:0;}
+  .trust-badge{display:flex;flex-direction:column;align-items:center;gap:12px;}
+  .trust-icon{font-size:32px;}
+  .trust-label{font-size:14px;font-weight:500;color:var(--text);}
+  .trust-copy{font-size:13px;color:var(--text-secondary);}
+
+  /* Guarantee */
+  .guarantee{background:var(--terra-light);padding:60px 64px;text-align:center;}
+  .guarantee-container{max-width:700px;margin:0 auto;}
+  .guarantee h3{font-size:24px;margin-bottom:16px;color:var(--text);}
+  .guarantee p{font-size:15px;color:var(--text-secondary);margin-bottom:0;line-height:1.8;}
+
+  /* Pricing Section */
+  .pricing{padding:100px 64px;background:var(--ivory);}
+  .pricing-container{max-width:900px;margin:0 auto;}
+  .pricing-header{text-align:center;margin-bottom:60px;}
+  .pricing-header h2{font-size:40px;line-height:1.25;margin-bottom:12px;}
+  .pricing-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-bottom:60px;}
+  .price-card{background:#fff;border:1px solid #e8e2d0;padding:48px 32px;border-radius:4px;text-align:center;position:relative;}
+  .price-card.featured{border:2px solid var(--green);background:var(--terra-light);}
+  .price-card.featured::before{content:'BEST VALUE';position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--green);color:#fff;font-size:11px;letter-spacing:.1em;padding:6px 16px;border-radius:2px;}
+  .price-title{font-size:24px;font-family:'Fraunces',serif;margin-bottom:12px;}
+  .price-subtitle{font-size:14px;color:var(--text-secondary);margin-bottom:24px;min-height:40px;}
+  .price-amount{font-size:42px;font-family:'Fraunces',serif;color:var(--terra);margin-bottom:8px;}
+  .price-info{font-size:13px;color:var(--text-secondary);margin-bottom:32px;}
+  .price-features{text-align:left;margin-bottom:32px;font-size:14px;}
+  .price-features li{list-style:none;margin-bottom:12px;padding-left:24px;position:relative;color:var(--text-secondary);}
+  .price-features li::before{content:'✓';position:absolute;left:0;color:var(--green);font-weight:bold;}
+  .price-cta{width:100%;}
+
+  /* CTA Section */
+  .cta-section{padding:100px 64px;text-align:center;background:var(--forest);}
+  .cta-container{max-width:700px;margin:0 auto;}
+  .cta-section h2{color:var(--ivory);font-size:42px;line-height:1.2;margin-bottom:16px;}
+  .cta-copy{color:#D8D2BF;font-size:15px;max-width:600px;margin:0 auto 40px;}
+
+  /* Footer */
+  footer{background:var(--text);color:var(--ivory);padding:48px 64px;text-align:center;font-size:13px;}
+  footer a{color:var(--gold);text-decoration:underline;}
+
+  /* Responsive */
+  @media(max-width:768px){
+    .modules-grid,.testimonials-grid{grid-template-columns:1fr;}
+    .trust-badges{grid-template-columns:1fr;}
+    .pricing-grid{grid-template-columns:1fr;}
+    nav{flex-direction:column;gap:20px;padding:20px;}
+    .navlinks{flex-direction:column;gap:12px;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Lauren Sapala</div>
+  <div class="navlinks"><a>Courses</a><a>Books</a><a>Blog</a><a>About</a><a>Contact</a></div>
+</nav>
+
+<section class="hero">
+  <div class="hero-kicker">Self-paced video course</div>
+  <h1>Love & Sexuality for INFJs and INFPs</h1>
+  <p>Understand why you struggle with boundaries, how to honor your emotional needs, and how to build romantic connections that actually work for sensitive people.</p>
+</section>
+
+<div class="hero-cta">
+  <button class="btn-primary">Enroll Now</button>
+</div>
+
+<section class="section">
+  <h2>Why this course matters</h2>
+  <p>If you're an INFJ or INFP, you've probably felt it: that deep conflict between your need for emotional intimacy and your difficulty in making your needs known. You feel everything your partner feels. You struggle to say no. You become overwhelmed by their energy.</p>
+  <p>And then you wonder if something is <strong>wrong with you.</strong></p>
+  <p>Nothing is wrong with you. You're experiencing what thousands of sensitive people experience in romantic relationships. This course helps you understand the hidden patterns in your relationships, and how to break free from them.</p>
+</section>
+
+<section class="modules">
+  <div class="modules-container">
+    <h2>Eight videos. Eight key insights.</h2>
+    <div class="modules-grid">
+      <div class="module-card">
+        <div class="module-img">[ Video 1 ]</div>
+        <div class="module-text">
+          <div class="module-num">Module 1</div>
+          <div class="module-title">The Emotional Intimacy Paradox</div>
+        </div>
+      </div>
+      <div class="module-card">
+        <div class="module-img">[ Video 2 ]</div>
+        <div class="module-text">
+          <div class="module-num">Module 2</div>
+          <div class="module-title">Why Boundaries Feel Impossible</div>
+        </div>
+      </div>
+      <div class="module-card">
+        <div class="module-img">[ Video 3 ]</div>
+        <div class="module-text">
+          <div class="module-num">Module 3</div>
+          <div class="module-title">Reading Your Partner's Energy</div>
+        </div>
+      </div>
+      <div class="module-card">
+        <div class="module-img">[ Video 4 ]</div>
+        <div class="module-text">
+          <div class="module-num">Module 4</div>
+          <div class="module-title">The Shadow Side of Sensitivity</div>
+        </div>
+      </div>
+      <div class="module-card">
+        <div class="module-img">[ Video 5 ]</div>
+        <div class="module-text">
+          <div class="module-num">Module 5</div>
+          <div class="module-title">Communicating Your Needs</div>
+        </div>
+      </div>
+      <div class="module-card">
+        <div class="module-img">[ Video 6 ]</div>
+        <div class="module-text">
+          <div class="module-num">Module 6</div>
+          <div class="module-title">Reclaiming Sexual Desire</div>
+        </div>
+      </div>
+      <div class="module-card">
+        <div class="module-img">[ Video 7 ]</div>
+        <div class="module-text">
+          <div class="module-num">Module 7</div>
+          <div class="module-title">Healing Old Patterns</div>
+        </div>
+      </div>
+      <div class="module-card">
+        <div class="module-img">[ Video 8 ]</div>
+        <div class="module-text">
+          <div class="module-num">Module 8</div>
+          <div class="module-title">Moving Forward Together</div>
+        </div>
+      </div>
+    </div>
+    <div class="modules-cta">
+      <button class="btn-primary">Enroll Now</button>
+    </div>
+  </div>
+</section>
+
+<section class="benefits">
+  <div class="benefits-container">
+    <h2>What you'll discover</h2>
+    <div class="benefit-item">
+      <div class="benefit-title">The hidden energy patterns in your relationships</div>
+      <div class="benefit-text">Why you feel so much, and how that sensitivity is actually your superpower and not a weakness.</div>
+    </div>
+    <div class="benefit-item">
+      <div class="benefit-title">How to set boundaries without guilt</div>
+      <div class="benefit-text">The specific language and mindset shifts that help sensitive people say no without feeling like they're being selfish.</div>
+    </div>
+    <div class="benefit-item">
+      <div class="benefit-title">Why emotional intimacy is non-negotiable for you</div>
+      <div class="benefit-text">And how to communicate that need to a partner in ways they can actually hear and understand.</div>
+    </div>
+    <div class="benefit-item">
+      <div class="benefit-title">How to stop absorbing your partner's emotions</div>
+      <div class="benefit-text">Practical tools for staying connected without losing yourself in their experience.</div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials">
+  <div class="testimonials-container">
+    <div class="testimonials-header">
+      <h2>Join thousands of sensitive writers</h2>
+      <p>Real people, real transformations.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-text">"This course helped me understand why I've been struggling in relationships my whole life. Lauren doesn't shame sensitivity, she celebrates it and teaches you how to use it as a strength."</div>
+        <div class="testimonial-attr">— M.K., INFP | Minnesota</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-text">"I felt so alone in my experience until I took this. Knowing that thousands of other INFJs feel the exact same way was the greatest gift. I finally stopped thinking something was broken in me."</div>
+        <div class="testimonial-attr">— J.T., INFJ | California</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-text">"Lauren's teaching style is so gentle and clear. By module 3, I'd already had three major realizations about my own patterns. This was worth ten times the price."</div>
+        <div class="testimonial-attr">— S.R., INFP | Vermont</div>
+      </div>
+    </div>
+    <div class="testimonials-cta">
+      <button class="btn-primary">Enroll Now</button>
+    </div>
+  </div>
+</section>
+
+<section class="trust-section">
+  <div class="trust-container">
+    <div class="trust-badges">
+      <div class="trust-badge">
+        <div class="trust-icon">🔒</div>
+        <div class="trust-label">Secure Payment</div>
+        <div class="trust-copy">SSL encrypted. Trusted by thousands.</div>
+      </div>
+      <div class="trust-badge">
+        <div class="trust-icon">⏱️</div>
+        <div class="trust-label">Lifetime Access</div>
+        <div class="trust-copy">Watch whenever. Revisit anytime.</div>
+      </div>
+      <div class="trust-badge">
+        <div class="trust-icon">✓</div>
+        <div class="trust-label">60-Day Guarantee</div>
+        <div class="trust-copy">Full refund if not satisfied.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="guarantee">
+  <div class="guarantee-container">
+    <h3>Our promise to you</h3>
+    <p>Not 100% satisfied with the course? We'll refund your full payment within 60 days, no questions asked. We're confident this course will change how you understand your relationships, but we want you to feel completely safe making this decision.</p>
+  </div>
+</section>
+
+<section class="pricing">
+  <div class="pricing-container">
+    <div class="pricing-header">
+      <h2>Choose your path forward</h2>
+    </div>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="price-title">Video Course</div>
+        <div class="price-subtitle">Everything you need to transform your love life</div>
+        <div class="price-amount">$199</div>
+        <div class="price-info">One-time payment. Lifetime access.</div>
+        <ul class="price-features">
+          <li>8 in-depth video modules</li>
+          <li>Lifetime access</li>
+          <li>Download transcripts</li>
+          <li>Email support</li>
+        </ul>
+        <button class="btn-primary-alt price-cta">Enroll</button>
+      </div>
+      <div class="price-card featured">
+        <div class="price-title">Course + Coaching</div>
+        <div class="price-subtitle">Video course + one 45-minute coaching session</div>
+        <div class="price-amount">$278</div>
+        <div class="price-info">(a $359 value)</div>
+        <ul class="price-features">
+          <li>8 in-depth video modules</li>
+          <li>45-minute 1:1 coaching session at a preferred rate</li>
+          <li>Lifetime access to videos</li>
+          <li>Download transcripts</li>
+          <li>Email support</li>
+        </ul>
+        <button class="btn-primary-green price-cta">Choose This</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="cta-container">
+    <h2>Ready to understand your love life?</h2>
+    <p class="cta-copy">Start with the video course, or add a personal coaching session at a preferred rate. Save $81 when you bundle. Either way, you'll have lifetime access to everything, plus our 60-day satisfaction guarantee.</p>
+    <button class="btn-primary" style="margin-right:12px;">Enroll in Course ($199)</button>
+    <button class="btn-primary-green">Course + Coaching ($278)</button>
+  </div>
+</section>
+
+<footer>
+  <p>© 2024 Lauren Sapala. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+</footer>
+
+</body>
+</html>
